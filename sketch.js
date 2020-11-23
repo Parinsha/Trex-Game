@@ -72,7 +72,7 @@ function draw() {
   {
     trex.x = camera.position.x - 250;
     console.log(trex.x);
-    
+
     if(frameCount % 4 === 0)
     {
       score = score + 1;
@@ -93,9 +93,9 @@ function draw() {
 
     trex.velocityY = trex.velocityY + 0.8
 
-    if (ground.x < 0){
-      ground.x = ground.width/2;
-    }
+    //if (ground.x < 0){
+      //ground.x = ground.width/2;
+    //}
 
     spawnClouds();
     spawnObstacles();
@@ -125,7 +125,7 @@ function draw() {
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);   
   }
-  trex.collide(invisibleGround);
+  trex.collide(ground);
   if(mousePressedOver(restart)) 
 {
     reset();
